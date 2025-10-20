@@ -5,6 +5,6 @@ from django.http import HttpResponse
 # se def dentro da classe = metodo
 # se def fora da classe = função
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'noticias/index.html')
 
 # Create your views here.

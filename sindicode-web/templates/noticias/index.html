@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sindicato dos Codificadores de Brasília - Notícias Tech</title>
+    <!-- Carregamento do Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para usar a fonte Inter e cores customizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'union-blue': '#1e40af', // Azul escuro para o sindicato
+                        'union-teal': '#14b8a6', // Teal/Ciano para acentos
+                        'union-bg': '#f3f4f6', // Fundo cinza claro
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo customizado para um efeito de destaque leve */
+        .news-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-union-bg font-sans">
+
+    <!-- Cabeçalho (Header) Fixo e Responsivo -->
+    <header class="bg-union-blue shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logotipo e Título -->
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-union-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-white tracking-tight">Codificadores DF</span>
+                </a>
+
+                <!-- Navegação Principal (Desktop) -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-200 hover:text-union-teal px-3 py-2 text-sm font-medium rounded-md transition duration-150">Início</a>
+                    <a href="#noticias" class="text-gray-200 hover:text-union-teal px-3 py-2 text-sm font-medium rounded-md transition duration-150">Notícias</a>
+                    <a href="#" class="text-gray-200 hover:text-union-teal px-3 py-2 text-sm font-medium rounded-md transition duration-150">Eventos</a>
+                    <a href="#" class="bg-union-teal text-white px-3 py-2 text-sm font-medium rounded-md hover:bg-opacity-80 transition duration-150">Associe-se</a>
+                </nav>
+
+                <!-- Menu Mobile (Placeholder para toggle - Funcionalidade JS não inclusa para manter o foco no HTML/CSS) -->
+                <button class="md:hidden text-gray-200 hover:text-union-teal p-2 rounded-md">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Notícia em Destaque (Hero Section) -->
+        <section class="mb-12 bg-white rounded-xl shadow-xl overflow-hidden news-card">
+            <a href="#">
+                <div class="md:flex">
+                    <div class="md:flex-shrink-0">
+                        <!-- Imagem de Destaque -->
+                        <img class="h-64 w-full object-cover md:w-96" 
+                             src="https://placehold.co/800x600/1e40af/ffffff?text=Brasilia+Tech" 
+                             alt="[Imagem de um codificador trabalhando em Brasília]">
+                    </div>
+                    <div class="p-8">
+                        <div class="uppercase tracking-wide text-sm text-union-teal font-semibold">DESTAQUE | Inovação Local</div>
+                        <h2 class="block mt-1 text-2xl leading-tight font-extrabold text-union-blue hover:text-union-teal transition duration-150">
+                            Brasília Lidera: Novo Framework 'CerradoJS' Acelera Desenvolvimento Web
+                        </h2>
+                        <p class="mt-2 text-gray-600">
+                            Criado por desenvolvedores locais, o CerradoJS promete ser o motor da próxima geração de aplicações web no Centro-Oeste. Saiba como a comunidade está abraçando a novidade e os planos para o futuro global.
+                        </p>
+                        <div class="mt-4 text-sm text-gray-500">
+                            Por Ana Carolina | 15 de Outubro, 2025
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Grade de Notícias (Grid) -->
+        <section id="noticias" class="space-y-10">
+            
+            <h1 class="text-3xl font-bold text-gray-800 border-b-2 border-union-teal pb-2">Últimas Notícias e Análises</h1>
+
+            <!-- Destaques Secundários em Grid (3 colunas no desktop, 1 na mobile) -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card 1: Inteligência Artificial -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden news-card">
+                    <a href="#">
+                        <img class="h-48 w-full object-cover" 
+                             src="https://placehold.co/600x400/10b981/ffffff?text=IA+e+Etica" 
+                             alt="[Imagem de cérebro digital e inteligência artificial]">
+                        <div class="p-6">
+                            <div class="text-xs uppercase font-semibold text-green-600 mb-1">Inteligência Artificial</div>
+                            <h3 class="font-bold text-xl mb-2 text-gray-800 hover:text-union-teal transition duration-150">
+                                IA Autônoma: Ameaça ou Oportunidade? Debate Ferve no Sindicato
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Especialistas discutem as implicações éticas da IA Generativa e como os codificadores de Brasília devem se preparar para a nova era.
+                            </p>
+                            <div class="mt-4 text-xs text-gray-500">
+                                Por João Ricardo | 18 de Outubro
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 2: Linguagem de Programação (Rust) -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden news-card">
+                    <a href="#">
+                        <img class="h-48 w-full object-cover" 
+                             src="https://placehold.co/600x400/ef4444/ffffff?text=Rust+Code" 
+                             alt="[Imagem de código Rust em uma tela escura]">
+                        <div class="p-6">
+                            <div class="text-xs uppercase font-semibold text-red-600 mb-1">Linguagens</div>
+                            <h3 class="font-bold text-xl mb-2 text-gray-800 hover:text-union-teal transition duration-150">
+                                A Ascensão do Rust: Por Que a Segurança Conquista o DF
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                De sistemas embarcados a backends de alta performance, o Rust está se tornando o queridinho dos projetos críticos em empresas de tecnologia da capital.
+                            </p>
+                            <div class="mt-4 text-xs text-gray-500">
+                                Por Renata Lopes | 17 de Outubro
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 3: Eventos (Hackathon) -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden news-card">
+                    <a href="#">
+                        <img class="h-48 w-full object-cover" 
+                             src="https://placehold.co/600x400/f59e0b/ffffff?text=Hackathon+Eixo" 
+                             alt="[Imagem do Eixo Monumental com ícones de código]">
+                        <div class="p-6">
+                            <div class="text-xs uppercase font-semibold text-yellow-600 mb-1">Comunidade | Eventos</div>
+                            <h3 class="font-bold text-xl mb-2 text-gray-800 hover:text-union-teal transition duration-150">
+                                Hackathon 'Eixo Monumental' Bate Recorde de Inovação
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Soluções criativas para problemas urbanos de Brasília foram apresentadas. Conheça as três equipes vencedoras e seus projetos disruptivos.
+                            </p>
+                            <div class="mt-4 text-xs text-gray-500">
+                                Por Equipe de Comunicação | 16 de Outubro
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+            </div> <!-- Fim da Grade de Notícias -->
+
+            <!-- Seção de Artigos Longos (2 Colunas no Desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+
+                <!-- Artigo 4: TypeScript e Ecossistema -->
+                <article class="bg-white p-6 rounded-xl shadow-lg news-card">
+                    <a href="#">
+                        <div class="text-xs uppercase font-semibold text-indigo-600 mb-2">Linguagens | WebDev</div>
+                        <h3 class="font-bold text-2xl mb-3 text-gray-800 hover:text-union-teal transition duration-150">
+                            A Força do Tipo: Como o TypeScript Dominou o Ecossistema de Brasília
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            De startups a órgãos governamentais, o uso de TypeScript se solidificou como padrão de mercado na capital. Analisamos o impacto na qualidade do código e na contratação de profissionais.
+                        </p>
+                        <div class="mt-4 text-sm text-gray-500">
+                            Por Lucas Farias | 14 de Outubro
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Artigo 5: Segurança e Nuvem -->
+                <article class="bg-white p-6 rounded-xl shadow-lg news-card">
+                    <a href="#">
+                        <div class="text-xs uppercase font-semibold text-red-700 mb-2">Segurança | Cloud</div>
+                        <h3 class="font-bold text-2xl mb-3 text-gray-800 hover:text-union-teal transition duration-150">
+                            Desafios de Segurança na Nuvem Híbrida em Órgãos Públicos do DF
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Com a migração acelerada de dados, a segurança das infraestruturas híbridas se torna a prioridade máxima. Entrevista com o CTO de um dos maiores data centers da região.
+                        </p>
+                        <div class="mt-4 text-sm text-gray-500">
+                            Por Vanessa Souza | 13 de Outubro
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-gray-800 mt-12 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Coluna 1: Informações do Sindicato -->
+                <div>
+                    <h4 class="text-lg font-bold text-union-teal mb-3">Sindicato DF Code</h4>
+                    <p class="text-sm text-gray-400">
+                        Representando os interesses da comunidade de codificadores e profissionais de TI em Brasília e no Distrito Federal.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <!-- Ícones Sociais Fictícios -->
+                        <svg class="h-6 w-6 text-gray-400 hover:text-white transition duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.988H7.56V12h2.878V9.45c0-2.846 1.732-4.402 4.258-4.402 1.21 0 2.47.215 2.47.215v2.704h-1.372c-1.343 0-1.75.833-1.75 1.684V12h3.046l-.488 2.891h-2.558v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        <svg class="h-6 w-6 text-gray-400 hover:text-white transition duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.195a.738.738 0 00-.709-.59c-2.486-.337-9.897-.336-12.384 0a.738.738 0 00-.708.59c-.218 1.61-.218 8.21 0 9.82a.737.737 0 00.708.589c2.487.336 9.898.336 12.384 0a.738.738 0 00.709-.59c.218-1.61.218-8.21 0-9.82zM10.153 14.896V7.09l5.066 3.903-5.066 3.903z"/></svg>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h4 class="text-lg font-bold text-union-teal mb-3">Acesso Rápido</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Estatuto</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Agenda de Cursos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Fórum da Comunidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Categorias -->
+                <div>
+                    <h4 class="text-lg font-bold text-union-teal mb-3">Categorias</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Inteligência Artificial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Linguagens & Frameworks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Carreira & Mercado</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato -->
+                <div>
+                    <h4 class="text-lg font-bold text-union-teal mb-3">Fale Conosco</h4>
+                    <p class="text-sm text-gray-400">Endereço Fictício: Eixo Monumental, Bloco K, Brasília - DF</p>
+                    <p class="text-sm text-gray-400 mt-2">Email: contato@dfcode.org</p>
+                    <p class="text-sm text-gray-400">Telefone: (61) 9999-0000</p>
+                </div>
+            </div>
+
+            <!-- Direitos Autorais -->
+            <div class="mt-10 pt-6 border-t border-gray-700 text-center">
+                <p class="text-sm text-gray-500">&copy; 2025 Sindicato dos Codificadores de Brasília. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
